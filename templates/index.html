@@ -3,57 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Резюме Python-разработчика</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Резюме Романов Роман</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Иван Иванов</h1>
-        <p>Python-разработчик</p>
-        <p>Email: example@example.com | Телефон: +7 (123) 456-78-90</p>
-        <p><a href="https://github.com/username">GitHub</a> | <a href="https://linkedin.com/in/username">LinkedIn</a></p>
-    </header>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll("section");
 
-    <section>
-        <h2>О себе</h2>
-        <p>Опытный Python-разработчик с 3+ годами опыта в создании веб-приложений и API. Специализируюсь на Django, Flask и RESTful API.</p>
-    </section>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    }, { threshold: 0.1 });
 
-    <section>
-        <h2>Навыки</h2>
-        <ul>
-            <li>Python, Django, Flask</li>
-            <li>RESTful API, GraphQL</li>
-            <li>SQL (PostgreSQL, MySQL)</li>
-            <li>Docker, Kubernetes</li>
-        </ul>
-    </section>
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+});
+</script>
+    <div class="resume">
+        <div class="header">
+            <div class="photo">
+                <img src="{{ url_for('static', filename='photo.png') }}" alt="Фото Романов Роман">
+            </div>
+            <div class="info">
+                <h1>Романов Роман</h1>
+                <p class="subtitle">Python-разработчик</p>
+                <div class="contacts">
+                    <p><i class="fab fa-telegram"></i> Telegram: <a href="https://t.me/roman_gorkiy">@roman_gorkiy</a></p>
+                    <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/Amore52">github.com/amore52</a></p>
+                    <p><i class="fas fa-phone"></i> Телефон: +7 (952) 454-88-67</p>
+                    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:4more52@gmail.com">4more52@gmail.com</a>
+                </div>
+            </div>
+        </div>
+        <!-- Основные секции -->
+        <div class="content">
+            <!-- Секция "Навыки" -->
+            <section class="skills">
+                <h2>Стек</h2>
+                <ul>
+                    <li>Git</li>
+                    <li>Python</li>
+                    <li>Django, Flask</li>
+                    <li>RESTful API (Django REST Framework) Создание CRUD-операций.</li>
+                    <li>PostgreSQL, SQLite</li>
+                    <li>Docker (базовый уровень)</li>
+                    <li>HTML, CSS</li>
+                </ul>
+            </section>
+                        <!-- Секция "Проекты" -->
+            <section class="projects">
+                <h2>Проекты</h2>
+                <div class="project">
+                    <h3>Бургерная на Django</h3>
+                    <p>Разработал backend для кафе-закусочной с использованием Django.</p>
+                    <p>Ссылка на GitHub: <a href="https://github.com/Amore52/star-burger.git">https://github.com/Amore52/star-burger.git</a></p>
+                </div>
+                <div class="project">
+                    <h3>Боты с генерацией ответов</h3>
+                    <p>Создал ботов VK и Telegram которые используют Google Dialogflow для обработки естественного языка и генерации ответов.</p>
+                    <p>Ссылка на GitHub: <a href="https://github.com/Amore52/ai_bot">https://github.com/Amore52/ai_bot</a></p>
+                </div>
+                <div class="project">
+                    <h3>Туристическая карта</h3>
+                    <p>Веб-приложение на базе Django для создания и отображения карты туристических мест с интерактивными элементами. Каждое место включает изображения, краткое и полное описание, позволяя пользователям исследовать достопримечательности и их детали.</p>
+                    <p>Ссылка на GitHub: <a href="https://github.com/Amore52/where_to_go.git">https://github.com/Amore52/where_to_go</a></p>
+                </div>
 
-    <section>
-        <h2>Опыт работы</h2>
-        <p><strong>Python-разработчик</strong>, Компания XYZ (январь 2021 – настоящее время)</p>
-        <ul>
-            <li>Разработка и поддержка веб-приложений на Django.</li>
-            <li>Создание RESTful API для интеграции с внешними сервисами.</li>
-        </ul>
-    </section>
+            </section>
+            <!-- Секция "Опыт работы" -->
+            <section class="experience">
+                <h2>Опыт работы</h2>
+                <div class="job">
+                    <h3>Фриланс-проекты</h3>
+                    <p class="company">Удаленная работа (январь 2023 – настоящее время)</p>
+                    <ul>
+                        <li>Разработал несколько небольших веб-приложений на Flask и Django.</li>
+                        <li>Создал Telegram-бота для уведомлений с использованием асинхронного кода.</li>
+                    </ul>
+                </div>
+            </section>
 
-    <section>
-        <h2>Образование</h2>
-        <p><strong>Бакалавр компьютерных наук</strong>, Университет ABC (2017–2021)</p>
-    </section>
+            <!-- Секция "Образование" -->
+            <section class="education">
+                <h2>Образование</h2>
+                <div class="degree">
+                    <h3>Техник-программист</h3>
+                    <p class="institution">Нижегородский Государственный Университет им. К. Минина (2012-2016)</p>
+                </div>
+                <div class="courses">
+                    <h3>Курсы</h3>
+                    <ul>
+                        <li><a href="{{ url_for('python_certificate') }}">Python-разработчик, Devman (2024 – 2025)</a></li>
+                        <li>Django для начинающих, Stepik (2023)</li>
+                    </ul>
+                </div>
+            </section>
 
-    <section>
-        <h2>Проекты</h2>
-        <p><strong>Онлайн-магазин на Django</strong></p>
-        <ul>
-            <li>Разработал backend для интернет-магазина с использованием Django и PostgreSQL.</li>
-            <li>Ссылка на GitHub: <a href="https://github.com/username/project">github.com/username/project</a></li>
-        </ul>
-    </section>
 
-    <footer>
-        <a href="resume.pdf" download>Скачать резюме в PDF</a>
-    </footer>
+            <!-- Секция "О себе" -->
+            <section class="about">
+                <h2>О себе</h2>
+                <p>Python-разработчик с опытом разработки веб-приложений и API. Имею знания Django, Flask и RESTful API. Стремлюсь к профессиональному росту и готов учиться новым технологиям. Умею работать в команде и быстро осваивать новые инструменты.</p>
+            </section>
+        </div>
+        <div class="download">
+            <a href="{{ url_for('static', filename='resume.pdf') }}" download>Скачать резюме в PDF</a>
+        </div>
+    </div>
 </body>
 </html>

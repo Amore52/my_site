@@ -1,0 +1,237 @@
+/* Основные стили */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.resume {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Шапка с фото и контактами */
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.photo {
+    width: 190px;
+    height: 225px;
+    margin-right: 35px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.photo img {
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+}
+
+.info {
+    flex: 1;
+}
+
+.info h1 {
+    font-size: 2.2em;
+    margin: 0;
+    color: #333;
+}
+
+.info .subtitle {
+    font-size: 1.5em;
+    color: #666;
+    margin: 5px 0;
+}
+
+.contacts {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.contacts a {
+    color: #2196F3; /* Синий цвет */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contacts a:hover {
+    color: #1976D2; /* Темнее синий */
+    text-decoration: underline;
+}
+
+/* Основные секции */
+.content {
+    display: grid;
+    gap: 30px;
+}
+
+section {
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+    font-size: 1.6em;
+    margin: 0 0 15px;
+    color: #333;
+    border-bottom: 2px solid #2196F3; /* Синий цвет */
+    padding-bottom: 5px;
+}
+
+section ul {
+    list-style-type: square;
+    padding-left: 20px;
+    margin: 0;
+}
+
+section ul li {
+    margin-bottom: 8px;
+}
+
+.job, .project {
+    margin-bottom: 20px;
+}
+
+.job h3, .project h3 {
+    font-size: 1.2em;
+    margin: 0;
+    color: #333;
+}
+
+.job .company, .project p {
+    font-size: 0.9em;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Кнопка для скачивания */
+.download {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.download a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2196F3; /* Синий цвет */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.download a:hover {
+    background-color: #1976D2; /* Темнее синий */
+}
+
+/* Анимации */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .photo {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .resume {
+        padding: 20px;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .photo {
+        width: 100px;
+        height: 130px;
+    }
+
+    .info h1 {
+        font-size: 1.8em;
+    }
+
+    .info .subtitle {
+        font-size: 1em;
+    }
+
+    section h2 {
+        font-size: 1.4em;
+    }
+}
+
+/* Стили для страницы сертификата */
+.certificate-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.certificate-container h1 {
+    font-size: 2em;
+    color: #2196F3;
+    margin-bottom: 20px;
+}
+
+.certificate-container p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.certificate-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #2196F3;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: #1976D2;
+}
